@@ -1,0 +1,2 @@
+myvenv\Scripts\activate       // activates the virtual environment
+python manage.py runserver    //run the server (first swicth to virtual environment)
