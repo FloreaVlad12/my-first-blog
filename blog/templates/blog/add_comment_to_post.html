@@ -1,12 +1,13 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h2>New post</h2>
-<div class="button1">
+    <h1>New comment</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
 
-        <button type="submit" class="myButton2">Save post</button>
-</div>
+         <button type="submit" class="myButton"><div class="share-button">Share</div></button>
+
+
+
     </form>
 {% endblock %}
