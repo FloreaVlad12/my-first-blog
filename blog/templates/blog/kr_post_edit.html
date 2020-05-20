@@ -1,0 +1,12 @@
+{% extends 'blog/kr_base.html' %}
+
+{% block content %}
+    <h2>새로운 포스트</h2>
+<div class="button1">
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="myButton2">포스트를 저장하다</button>
+</div>
+    </form>
+{% endblock %}

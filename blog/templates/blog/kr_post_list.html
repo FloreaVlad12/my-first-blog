@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/kr_base.html' %}
 
 {% block content %}
     {% for post in posts %}
@@ -6,9 +6,9 @@
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <h2><a href="{% url 'kr_post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             
-<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
+<a href="{% url 'kr_post_detail' pk=post.pk %}">코멘트: {{ post.comments.count }}</a>
         </div>
     {% endfor %}
 {% endblock %}

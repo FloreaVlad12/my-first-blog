@@ -1,0 +1,13 @@
+{% extends 'blog/kr_base.html' %}
+
+{% block content %}
+    <h1>새로운 코멘트</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+
+         <button type="submit" class="myButton"><div class="share-button">코멘트를 하다</div></button>
+
+
+
+    </form>
+{% endblock %}
