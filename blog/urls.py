@@ -22,4 +22,5 @@ urlpatterns = [
     path('post/new/kr', views.kr_post_new, name='kr_post_new'),
     path('post/<pk>/publish/kr', views.kr_post_publish, name='kr_post_publish'),
     path('drafts/kr', views.kr_post_draft_list, name='kr_post_draft_list'),
+    path('contact2', views.contact, name='contact'),
 ]

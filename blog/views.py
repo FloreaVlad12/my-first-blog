@@ -161,3 +161,6 @@ def kr_post_publish(request, pk):
 def kr_post_draft_list(request):
     posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')
     return render(request, 'blog/kr_post_draft_list.html', {'posts': posts})
+
+def contact(request):
+    return redirect('blog/contact.html')
