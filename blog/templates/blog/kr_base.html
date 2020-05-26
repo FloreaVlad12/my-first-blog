@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>블라드의 브로그</title>
+        <title>버밍엄 대학 브로그</title>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -16,13 +16,15 @@
 
 
      {% if user.is_authenticated %}
-        <a href="{% url 'kr_post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        
+        <a href="{% url 'kr_post_new' %}" class="myButton6">새로운 포스트</a>
+
         <a href="{% url 'kr_post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
         <p class="top-menu">안녕하세요, {{ user.username }} <small>(<a href="{% url 'logout' %}">로그아웃</a>)</small></p>
     {% else %}
         <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
       {% endif %}
-        <h1><a href="{% url 'kr_post_list' %}">블라드의 블로그</a></h1>
+        <h1><a href="{% url 'kr_post_list' %}">버밍엄 대학 블로그</a></h1>
     </div>
     <div class="content container">
         <div class="row">

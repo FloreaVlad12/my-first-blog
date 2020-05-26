@@ -1,14 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h2>New post</h2>
+    <h2>New event</h2>
 <div class="button1">
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
 
 
 
-        <button type="submit" class="myButton2">Save post</button>
+        <button type="submit" class="myButton2">Save event</button>
 </div>
     </form>
 {% endblock %}

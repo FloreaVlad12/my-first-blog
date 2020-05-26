@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Post, Comment
+from .models import Post, Comment, Event, Comment_event, Reply
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, CommentForm
-from django.shortcuts import redirect
+from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm
+from django.shortcuts import redirect, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -164,3 +164,81 @@ def kr_post_draft_list(request):
 
 def contact(request):
     return redirect('blog/contact.html')
+
+
+
+@login_required
+def event_new(request):
+    if request.method == "POST":
+        form = EventForm(request.POST)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.author = request.user
+            event.save()
+            
+          
+            
+            return redirect('event_detail', pk=event.pk)
+    else:
+        form = EventForm()
+    return render(request, 'blog/event_edit.html', {'form': form})
+
+@login_required
+def event_remove(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    event.delete()
+    return redirect('event_list')
+
+
+def event_detail(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    return render(request, 'blog/event_detail.html', {'event': event})
+
+def event_list(request):
+     #events = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+     events = Event.objects.filter().order_by('event_date')
+     return render(request, 'blog/event_list.html', {'events': events})
+ 
+@login_required
+def event_edit(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.author = request.user
+            event.save()
+            
+            return redirect('event_detail', pk=event.pk)
+    else:
+        form = EventForm(instance=event)
+    return render(request, 'blog/event_edit.html', {'form': form}) 
+
+def add_comment_to_event(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        form = Comment_eventForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.event = event
+            comment.save()
+            return redirect('event_detail', pk=event.pk)
+    else:
+        form = Comment_eventForm()
+    return render(request, 'blog/add_comment_to_event.html', {'form': form})
+
+
+def add_reply_to_comment(request, pk):
+    comment_event = get_object_or_404(Comment_event, pk=pk)
+    
+    if request.method == "POST":
+        form = ReplyForm(request.POST)
+        if form.is_valid():
+            reply = form.save(commit=False)
+            reply.comment_event = comment_event
+            reply.save()
+            return redirect('event_detail', pk=comment_event.event.pk)
+            #return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    else:
+        form = ReplyForm()
+    return render(request, 'blog/add_reply_to_comment.html', {'form': form})

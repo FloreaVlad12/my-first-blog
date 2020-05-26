@@ -93,9 +93,23 @@ font-size: 50px;
     margin: 20px 0px 20px 20px;
 }
 
+.reply {
+    margin-left: 120px;
+}
 
-
-
+.nameanddate {
+     font-family: "Courier New", Courier, monospace;
+     font-size: 21px;
+     letter-spacing: -1px;
+     word-spacing: -2px;
+     color: #51D04E;
+     font-weight: 400;
+     text-decoration: underline solid rgb(68, 68, 68);
+     font-style: italic;
+     font-variant: normal;
+     text-transform: none;
+     margin-top: 60px;
+}
 
 .myButton {
 	box-shadow: 0px 1px 0px 0px #fff6af;
@@ -218,6 +232,60 @@ font-size: 50px;
 	background-color:#5cbf2a;
 }
 .myButtonKr:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+.myButton6 {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:12px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:18px;
+	font-weight:bold;
+	padding:7px 9px;
+	text-decoration:none;
+	text-shadow:2px 4px 0px #810e05;
+      
+}
+.myButton6:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton6:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton7 {
+	box-shadow:inset 0px -18px 14px -7px #276873;
+	background-color:#599bb3;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:13px;
+	font-weight:bold;
+	font-style:italic;
+	padding:7px 19px;
+	text-decoration:none;
+	text-shadow:0px -6px 0px #3d768a;
+}
+.myButton7:hover {
+	background-color:#408c99;
+}
+.myButton7:active {
 	position:relative;
 	top:1px;
 }
