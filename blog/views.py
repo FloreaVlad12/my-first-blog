@@ -4,9 +4,9 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm, EmailForm
 from django.shortcuts import redirect, HttpResponseRedirect
-from django.contrib.auth.decorators. import login_required
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
-from django.contrib.auth.decorators. import permission_required
+from django.contrib.auth.decorators import permission_required
 
 # Create your views here.
 def post_list(request):
