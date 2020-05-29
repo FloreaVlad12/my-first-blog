@@ -1,6 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
+<div class="container3">
+  <div class="container-background3"></div>
+<div class="content3">
+
     <h2>New post</h2>
 <div class="button1">
     <form method="POST" class="post-form">{% csrf_token %}
@@ -11,4 +16,7 @@
         <button type="submit" class="myButton2">Save post</button>
 </div>
     </form>
+</div>
+</div>
+
 {% endblock %}

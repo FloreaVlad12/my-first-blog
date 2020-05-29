@@ -1,6 +1,11 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
+<div class="container6">
+  <div class="container-background6"></div>
+<div class="content6">
+
     <h1>New comment</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
@@ -10,4 +15,7 @@
 
 
     </form>
+
+</div>
+</div>
 {% endblock %}

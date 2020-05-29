@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/kr_base.html' %}
 
 {% block content %}
 
@@ -6,17 +6,17 @@
   <div class="container-background8"></div>
 <div class="content8">
 
- <h1>Send us a message!</h1>
+ <h1>우리에게 메시지를 보내다 </h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
 
-         <button type="submit" class="myButton"><div class="share-button">Send</div></button>
+         <button type="submit" class="myButton"><div class="share-button">메시지를 보내다</div></button>
 
 
 
     </form>
+</div>
+</div>
 
-</div>
-</div>
 
 {% endblock %}

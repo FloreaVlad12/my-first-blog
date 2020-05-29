@@ -1,6 +1,11 @@
 {% extends 'blog/kr_base.html' %}
 
 {% block content %}
+
+<div class="container6">
+  <div class="container-background6"></div>
+<div class="content6">
+
     <h1>새로운 코멘트</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
@@ -10,4 +15,8 @@
 
 
     </form>
+
+</div>
+</div>
+
 {% endblock %}

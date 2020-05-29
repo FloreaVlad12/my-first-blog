@@ -1,0 +1,64 @@
+{% extends 'blog/kr_base.html' %}
+
+{% block content %}
+    <div class="post">
+       
+    <div class="date">
+        
+    </div>
+
+    
+
+              <a class="btn btn-default" href="{% url 'kr_event_edit' pk=event.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+<a class="btn btn-default" href="{% url 'kr_event_remove' pk=event.pk %}" onClick="alert('이 행사를 진짜 삭제하고 싶습니까?')"><span class="glyphicon glyphicon-remove"></span></a>
+
+        <h2>{{ event.name }}, 날짜: {{ event.event_date }}</h2>
+        <p>장소: {{ event.venue }} </p>
+        <p>행사의 숙주: {{ event.manager }} </p>
+        <p>{{ event.description|linebreaksbr }}</p>
+    </div>
+
+<hr>
+<h3> 코멘트들 </h3>
+
+
+
+
+
+<div class="add_comment">
+<a class="myButton4" href="{% url 'kr_add_comment_to_event' pk=event.pk %}">새로운 코멘트</a>   </div>
+
+{% for comment_event in event.comment_events.all %}
+    
+    <div class="comment">
+        <div class="date">
+            {{ comment_event.created_date }}
+           
+                 
+        </div>
+        <strong>{{ comment_event.author }}</strong>
+        <p>{{ comment_event.text|linebreaks }}</p>
+    </div>
+   <a href="{% url 'kr_add_reply_to_comment' pk=comment_event.pk %}" class="myButton7">답하다</a>
+
+
+<div class="reply">
+<h4> 답: </h4>
+
+{% for reply in comment_event.replys.all %}
+<div class="nameanddate">
+<p> {{ reply.author }} 씨는 {{ reply.created_date }}에  답했습니다: </p>
+</div>
+<p> {{ reply.text }} </p>
+
+{% empty %}
+    <p> 아직 답이 없습니다 </p>
+{% endfor %}
+</div>
+    
+
+{% empty %}
+    <p>아직 고멘트가 없습니다 ㅠ</p>
+{% endfor %}
+{% endblock %}

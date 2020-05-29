@@ -7,7 +7,9 @@ h1 a, h2 a {
 body {
     padding-left: 15px;
 
-background-color: #401744;
+
+
+background-color: #b1d9d1;
 }
 
 
@@ -19,10 +21,40 @@ background-color: #401744;
 
 
 .page-header {
-    background-color: #7dffff;
+   <!-- background-color: #7dffff;  -->
     margin-top: 0;
     padding: 60px 80px 80px 40px;
+
+position: relative;
 }
+
+.page-header .page-header-background {
+    position: absolute;
+ 
+   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob8.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.page-header .content12 {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #1a0000;
@@ -32,10 +64,15 @@ background-color: #401744;
 
 .content {
     margin-left: 40px;
-    color: #000000;
-font-size: 15pt;
+    color: #ffffff;
+font-size: 16pt;
 -webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: white;
+-webkit-text-stroke-color: black;
+}
+
+.title12 {
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
 }
 
 h1, h2, h3, h4 {
@@ -60,7 +97,53 @@ h1, h2, h3, h4 {
 
 .post-form textarea, .post-form input {
     width: 100%;
+
+
+
+
 }
+
+.thanks{
+
+padding:200px 150px;
+     background-image: url("https://www.rlf.co.uk/wp-content/uploads/2020/02/UoB-2-scaled.jpg");
+     width: 100%;
+     height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+     position: absolute;
+opacity: 0.2;
+
+
+}
+
+
+
+
+.container2 {
+
+    position: relative;
+}
+.container2 .container-background2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob1.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+   
+}
+.container2 .content2 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
 
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #0000ff;
@@ -77,7 +160,7 @@ h1, h2, h3, h4 {
 }
 
 .post h2 a, .post h2 a:visited {
-    color: #53ffff;
+    color: #ff8000;
 }
 
 .btn btn-default {
@@ -127,6 +210,8 @@ font-size: 50px;
 	padding:11px 28px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
@@ -148,11 +233,13 @@ font-size: 50px;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Trebuchet MS;
-	font-size:18px;
+	font-size:25px;
 	font-style:italic;
 	padding:21px 47px;
 	text-decoration:none;
 	text-shadow:4px 4px 0px #263666;
+       -webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
 }
 .myButton2:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
@@ -178,6 +265,8 @@ font-size: 50px;
 	padding:10px 11px;
 	text-decoration:none;
 	text-shadow:2px 9px 2px #9752cc;
+  -webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
 }
 .myButton3:hover {
 	background-color:#bc80ea;
@@ -275,12 +364,14 @@ font-size: 50px;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Verdana;
-	font-size:13px;
+	font-size:17px;
 	font-weight:bold;
 	font-style:italic;
 	padding:7px 19px;
 	text-decoration:none;
 	text-shadow:0px -6px 0px #3d768a;
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
 }
 .myButton7:hover {
 	background-color:#408c99;
@@ -292,8 +383,214 @@ font-size: 50px;
 
 
 
+.myButton8 {
+	box-shadow:inset 1px 7px 0px -2px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:16px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:10px 11px;
+	text-decoration:none;
+	text-shadow:0px 3px 0px #154682;
+       
+}
+.myButton8:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.myButton8:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton9 {
+	box-shadow:inset 0px 47px 32px -10px #e184f3;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:10px;
+	border:2px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:21px;
+	font-weight:bold;
+	font-style:italic;
+	padding:24px 54px;
+	text-decoration:none;
+	text-shadow:0px 5px 2px #9b14b3;
+}
+.myButton9:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;
+}
+.myButton9:active {
+	position:relative;
+	top:1px;
+}
 
 
+
+
+.container3 {
+
+    position: relative;
+
+}
+.container3 .container-background3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob2.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container3 .content3 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.container4 {
+
+    position: relative;
+
+}
+.container4 .container-background4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob6.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container4 .content4 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.container5 {
+
+    position: relative;
+
+}
+.container5 .container-background5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob7.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container5 .content5 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.container6 {
+
+    position: relative;
+      
+
+}
+.container6 .container-background6 {
+    position: absolute;
+ 
+   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob8.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container6 .content6 {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+.container7 {
+
+   
+   position:relative;
+
+
+}
+.container7 .container-background7 {
+
+ 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+   position:absolute;
+    padding:0;
+    margin:0;
+
+
+
+    background: url('../images/uob9.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container7 .content7 {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+.container8 .container-background8 {
+    position: absolute;
+ 
+   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob10.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container8 .content8 {
+    position: relative;
+
+    z-index: 1;
+}
 
 
 

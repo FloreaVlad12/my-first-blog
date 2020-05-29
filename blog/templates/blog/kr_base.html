@@ -9,15 +9,31 @@
     </head>
     <body>
     <div class="page-header">
+<div class="page-header-background"></div>
+<div class="content12">
+
+
+<div class="top-menu">
+<a href="{% url 'kr_contact' %}" class="myButton8"> 연락하다 </a>
+</div>
+
 
  <a href="{% url 'kr_post_list' %}" class="top-menu"><span class="glyphicon glyphicon-home"></span></a>
 
 <a href="{% url 'post_list' %}" class="myButtonKr">영어로 바꾸다</a>
 
 
+<a href="{% url 'kr_event_list' %}" class="myButton6"> 행사를 보기</a>
+
+ <a href="{% url 'kr_post_new' %}" class="myButton6"> 새로운 포스트</a>
+
+ <a href="{% url 'kr_event_new' %}" class="myButton6"> 행사 추가하다</a>
+
+
+
      {% if user.is_authenticated %}
         
-        <a href="{% url 'kr_post_new' %}" class="myButton6">새로운 포스트</a>
+       
 
         <a href="{% url 'kr_post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
         <p class="top-menu">안녕하세요, {{ user.username }} <small>(<a href="{% url 'logout' %}">로그아웃</a>)</small></p>
@@ -26,6 +42,10 @@
       {% endif %}
         <h1><a href="{% url 'kr_post_list' %}">버밍엄 대학 블로그</a></h1>
     </div>
+     </div>
+
+</div>
+
     <div class="content container">
         <div class="row">
             <div class="col-md-8">

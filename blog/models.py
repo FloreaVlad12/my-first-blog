@@ -69,4 +69,16 @@ class Reply(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.text              
+        return self.text    
+    
+    
+    
+class Email(models.Model):
+
+    subject = models.CharField(max_length=100)
+    text = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+    your_email = models.EmailField()
+
+    def __str__(self):
+        return self.text                

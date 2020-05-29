@@ -1,6 +1,4 @@
-{% extends 'blog/base.html' %}
-
-
+{% extends 'blog/kr_base.html' %}
 
 {% block content %}
 
@@ -8,7 +6,7 @@
   <div class="container-background7"></div>
 <div class="content7">
 
-    <h1>New reply </h1>
+    <h1>새로운 답 </h1>
 
 
     <form method="POST" class="post-form">{% csrf_token %}
@@ -17,14 +15,15 @@
 
 
 
-         <button type="submit" class="myButton"><div class="share-button">Reply</div></button>
+         <button type="submit" class="myButton"><div class="share-button">답하다</div></button>
            
 
 
     </form>
-
-
- </div>
+ 
 </div>
-  
+</div>
+
 {% endblock %}
+
+  

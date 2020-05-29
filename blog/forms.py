@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Post, Comment, Event, Comment_event, Reply
+from .models import Post, Comment, Event, Comment_event, Reply, Email
 
 class PostForm(forms.ModelForm):
 
@@ -33,4 +33,11 @@ class ReplyForm(forms.ModelForm):
 
     class Meta:
         model = Reply
-        fields = ('author', 'text',)             
+        fields = ('author', 'text',)   
+        
+        
+class EmailForm(forms.ModelForm):
+
+    class Meta:
+        model = Email
+        fields = ('subject', 'text', 'your_email',)                    

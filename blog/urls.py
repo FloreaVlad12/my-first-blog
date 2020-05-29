@@ -30,5 +30,15 @@ urlpatterns = [
     path('event/<pk>/remove/', views.event_remove, name='event_remove'),
     path('event/<int:pk>/comment/', views.add_comment_to_event, name='add_comment_to_event'),
     path('event/<int:pk>/comment/reply', views.add_reply_to_comment, name='add_reply_to_comment'),
+    path('event/new/kr', views.kr_event_new, name='kr_event_new'),
+    path('events/kr', views.kr_event_list, name='kr_event_list'),
+    path('event/<int:pk>/kr', views.kr_event_detail, name='kr_event_detail'),
+    path('event/<int:pk>/edit/kr', views.kr_event_edit, name='kr_event_edit'),
+    path('event/<pk>/remove/kr', views.kr_event_remove, name='kr_event_remove'),
+    path('event/<int:pk>/comment/kr', views.kr_add_comment_to_event, name='kr_add_comment_to_event'),
+    path('event/<int:pk>/comment/reply/kr', views.kr_add_reply_to_comment, name='kr_add_reply_to_comment'),
+    path('contactus', views.contact, name='contact'),
+    path('contactus/kr', views.kr_contact, name='kr_contact'),
+  
     
 ]

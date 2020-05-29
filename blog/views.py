@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Post, Comment, Event, Comment_event, Reply
+from .models import Post, Comment, Event, Comment_event, Reply, Email
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm
+from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm, EmailForm
 from django.shortcuts import redirect, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 
 # Create your views here.
 def post_list(request):
@@ -162,8 +163,51 @@ def kr_post_draft_list(request):
     posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')
     return render(request, 'blog/kr_post_draft_list.html', {'posts': posts})
 
+
 def contact(request):
-    return redirect('blog/contact.html')
+    if request.method == "POST":
+        form = EmailForm(request.POST)
+        if form.is_valid():
+            email = form.save(commit=False)
+            #emai.author = request.user
+            email.save()
+            
+            send_mail(
+                       email.subject,
+                       email.text,
+                       email.your_email,
+                       ['floreavlad2000@yahoo.com'],
+                       fail_silently=True,
+                     )
+   
+            return render(request, 'blog/thank_you_for_your_email.html')
+    else:
+        form = EmailForm()
+    return render(request, 'blog/contact.html', {'form': form})
+
+
+
+
+def kr_contact(request):
+    if request.method == "POST":
+        form = EmailForm(request.POST)
+        if form.is_valid():
+            email = form.save(commit=False)
+            #emai.author = request.user
+            email.save()
+            
+            send_mail(
+                       email.subject,
+                       email.text,
+                       email.your_email,
+                       ['floreavlad2000@yahoo.com'],
+                       fail_silently=True,
+                     )
+   
+            return render(request, 'blog/kr_thank_you_for_your_email.html')
+    else:
+        form = EmailForm()
+    return render(request, 'blog/kr_contact.html', {'form': form})
 
 
 
@@ -242,3 +286,89 @@ def add_reply_to_comment(request, pk):
     else:
         form = ReplyForm()
     return render(request, 'blog/add_reply_to_comment.html', {'form': form})
+
+
+
+
+
+
+             #KR EVENT VIEWS-------------------------------
+             
+             
+             
+             
+             
+             
+@login_required
+def kr_event_new(request):
+    if request.method == "POST":
+        form = EventForm(request.POST)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.author = request.user
+            event.save()
+   
+            return redirect('kr_event_detail', pk=event.pk)
+    else:
+        form = EventForm()
+    return render(request, 'blog/kr_event_edit.html', {'form': form})
+
+@login_required
+def kr_event_remove(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    event.delete()
+    return redirect('kr_event_list')
+
+
+def kr_event_detail(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    return render(request, 'blog/kr_event_detail.html', {'event': event})
+
+def kr_event_list(request):
+     #events = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+     events = Event.objects.filter().order_by('event_date')
+     return render(request, 'blog/kr_event_list.html', {'events': events})
+ 
+@login_required
+def kr_event_edit(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.author = request.user
+            event.save()
+            
+            return redirect('kr_event_detail', pk=event.pk)
+    else:
+        form = EventForm(instance=event)
+    return render(request, 'blog/kr_event_edit.html', {'form': form}) 
+
+def kr_add_comment_to_event(request, pk):
+    event = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        form = Comment_eventForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.event = event
+            comment.save()
+            return redirect('kr_event_detail', pk=event.pk)
+    else:
+        form = Comment_eventForm()
+    return render(request, 'blog/kr_add_comment_to_event.html', {'form': form})
+
+
+def kr_add_reply_to_comment(request, pk):
+    comment_event = get_object_or_404(Comment_event, pk=pk)
+    
+    if request.method == "POST":
+        form = ReplyForm(request.POST)
+        if form.is_valid():
+            reply = form.save(commit=False)
+            reply.comment_event = comment_event
+            reply.save()
+            return redirect('kr_event_detail', pk=comment_event.event.pk)
+            
+    else:
+        form = ReplyForm()
+    return render(request, 'blog/kr_add_reply_to_comment.html', {'form': form})             

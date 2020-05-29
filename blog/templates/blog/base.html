@@ -13,7 +13,13 @@
 
     <body>
     <div class="page-header">
+<div class="page-header-background"></div>
+<div class="content12">
 
+
+<div class="top-menu">
+<a href="{% url 'contact' %}" class="myButton8">Contact us</a>
+</div>
 
  <a href="{% url 'post_list' %}" class="top-menu"><span class="glyphicon glyphicon-home"></span></a>
 
@@ -22,14 +28,19 @@
 
 <a href="{% url 'kr_post_list' %}" class="myButtonKr">Switch to 한국어</a>
 
+<a href="{% url 'event_list' %}" class="myButton6"> View events</a>
 
-     {% if user.is_authenticated %}
-        
-        <a href="{% url 'post_new' %}" class="myButton6"> New post</a>
+ <a href="{% url 'post_new' %}" class="myButton6"> New post</a>
 
         <a href="{% url 'event_new' %}" class="myButton6"> New event</a>
 
-       <a href="{% url 'event_list' %}" class="myButton6"> View events</a>
+
+
+     {% if user.is_authenticated %}
+        
+       
+
+       
 
 
         <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
@@ -38,6 +49,13 @@
         <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
       {% endif %}
         <h1><a href="/">University of Birmingham blog</a></h1>
+
+
+
+</div>
+</div>
+
+
     </div>
     <div class="content container">
         <div class="row">

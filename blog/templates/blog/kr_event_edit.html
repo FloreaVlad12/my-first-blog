@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+{% extends 'blog/kr_base.html' %}
 
 {% block content %}
 
@@ -6,18 +6,18 @@
   <div class="container-background4"></div>
 <div class="content4">
 
-    <h2>New event</h2>
+    <h2>새로운 행사 추가하다 </h2>
 <div class="button1">
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
 
 
 
-        <button type="submit" class="myButton2">Save event</button>
+        <button type="submit" class="myButton2">행사를 저장하다</button>
 </div>
     </form>
 
-</div>
-</div>
 
+</div>
+</div>
 {% endblock %}
