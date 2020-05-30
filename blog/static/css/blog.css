@@ -632,4 +632,19 @@ text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 
 }
 
 
+#hello-user {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 25px;
+letter-spacing: -0.6px;
+word-spacing: -0.4px;
+color: #7567cc;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: small-caps;
+text-transform: none;
+
+}
+
+
 

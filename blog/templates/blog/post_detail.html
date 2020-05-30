@@ -14,6 +14,7 @@
 <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}" onClick="alert('Are you sure you want to delete this post?')"><span class="glyphicon glyphicon-remove"></span></a>
 
         <h2>{{ post.title }}</h2>
+       <h5> Author: {{post.author}}</h5>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 

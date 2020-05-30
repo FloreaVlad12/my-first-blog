@@ -36,7 +36,7 @@
        
 
         <a href="{% url 'kr_post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-        <p class="top-menu">안녕하세요, {{ user.username }} <small>(<a href="{% url 'logout' %}">로그아웃</a>)</small></p>
+        <p class="top-menu" id="hello-user">안녕하세요, {{ user.username }} <small>(<a href="{% url 'logout' %}">로그아웃</a>)</small></p>
     {% else %}
         <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
       {% endif %}

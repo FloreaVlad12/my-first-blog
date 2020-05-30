@@ -14,6 +14,7 @@
 <a class="btn btn-default" href="{% url 'kr_post_remove' pk=post.pk %}" onClick="alert('이 포스트를 진짜 삭제하고 싶습니까?')"><span class="glyphicon glyphicon-remove"></span></a>
 
         <h2>{{ post.title }}</h2>
+        <h5> 저자: {{post.author}}님</h5>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 
