@@ -65,10 +65,17 @@ position: relative;
 
 .content {
     margin-left: 40px;
-    color: #ffffff;
-font-size: 16pt;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: black;
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 21px;
+letter-spacing: 0.6px;
+word-spacing: 1.6px;
+color: #5325FF;
+font-weight: normal;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
 }
 
 .title12 {
@@ -186,7 +193,7 @@ font-size: 50px;
      font-size: 21px;
      letter-spacing: -1px;
      word-spacing: -2px;
-     color: #51D04E;
+     color: #ff0096;
      font-weight: 400;
      text-decoration: underline solid rgb(68, 68, 68);
      font-style: italic;
@@ -593,6 +600,36 @@ font-size: 50px;
     z-index: 1;
 }
 
+
+.no_permission {
+  font-family: "Lucida Console", Monaco, monospace;
+font-size: 28px;
+letter-spacing: 0.4px;
+word-spacing: 0px;
+color: #DA0627;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: normal;
+text-transform: none;
+
+}
+
+.no_account {
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 14px;
+letter-spacing: 1px;
+word-spacing: 1.8px;
+color: #2831BB;
+font-weight: normal;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
+
+text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+}
 
 
 

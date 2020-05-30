@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post, Comment, Event, Comment_event, Reply, Email
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm, EmailForm
 from django.shortcuts import redirect, HttpResponseRedirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.core.mail import send_mail
 
 
@@ -34,6 +34,7 @@ def post_new(request):
 
 
 @login_required
+@permission_required('blog.change_post', '/access_denied' )
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -61,6 +62,7 @@ def post_publish(request, pk):
 
 
 @login_required
+@permission_required('blog.delete_post', '/access_denied' )
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
@@ -86,6 +88,7 @@ def comment_approve(request, pk):
     return redirect('post_detail', pk=comment.post.pk)
 
 @login_required
+@permission_required('blog.delete_comment', '/access_denied' )
 def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
@@ -100,6 +103,7 @@ def kr_post_detail(request, pk):
     return render(request, 'blog/kr_post_detail.html', {'post': post})
 
 @login_required
+@permission_required('blog.change_post', '/access_denied/kr' )
 def kr_post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -114,6 +118,7 @@ def kr_post_edit(request, pk):
     return render(request, 'blog/kr_post_edit.html', {'form': form})
 
 @login_required
+@permission_required('blog.delete_post', '/access_denied/kr' )
 def kr_post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
@@ -133,6 +138,7 @@ def kr_add_comment_to_post(request, pk):
     return render(request, 'blog/kr_add_comment_to_post.html', {'form': form})
 
 @login_required
+@permission_required('blog.delete_comment', '/access_denied/kr' )
 def kr_comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
@@ -216,23 +222,32 @@ def kr_contact(request):
 
 
 
-@login_required
-def event_new(request):
-    if request.method == "POST":
-        form = EventForm(request.POST)
-        if form.is_valid():
-            event = form.save(commit=False)
-            event.author = request.user
-            event.save()
-            
-          
-            
-            return redirect('event_detail', pk=event.pk)
-    else:
-        form = EventForm()
-    return render(request, 'blog/event_edit.html', {'form': form})
+def no_permission(request):
+    return render (request, 'blog/no_permission.html')
+
+def kr_no_permission(request):
+    return render (request, 'blog/kr_no_permission.html')
+
 
 @login_required
+@permission_required('blog.add_event', '/access_denied' )
+def event_new(request):
+   
+      if request.method == "POST":
+          form = EventForm(request.POST)
+          if form.is_valid():
+             event = form.save(commit=False)
+             event.author = request.user
+             event.save()
+               
+             return redirect('event_detail', pk=event.pk)
+      else:
+             form = EventForm()
+             return render(request, 'blog/event_edit.html', {'form': form})
+   
+
+@login_required
+@permission_required('blog.delete_event', '/access_denied' )
 def event_remove(request, pk):
     event = get_object_or_404(Event, pk=pk)
     event.delete()
@@ -249,6 +264,7 @@ def event_list(request):
      return render(request, 'blog/event_list.html', {'events': events})
  
 @login_required
+@permission_required('blog.change_event', '/access_denied' )
 def event_edit(request, pk):
     event = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
@@ -305,6 +321,7 @@ def add_reply_to_comment(request, pk):
              
              
 @login_required
+@permission_required('blog.add_event', '/access_denied/kr' )
 def kr_event_new(request):
     if request.method == "POST":
         form = EventForm(request.POST)
@@ -319,6 +336,7 @@ def kr_event_new(request):
     return render(request, 'blog/kr_event_edit.html', {'form': form})
 
 @login_required
+@permission_required('blog.delete_event', '/access_denied/kr' )
 def kr_event_remove(request, pk):
     event = get_object_or_404(Event, pk=pk)
     event.delete()
@@ -335,6 +353,7 @@ def kr_event_list(request):
      return render(request, 'blog/kr_event_list.html', {'events': events})
  
 @login_required
+@permission_required('blog.delete_event', '/access_denied/kr' )
 def kr_event_edit(request, pk):
     event = get_object_or_404(Event, pk=pk)
     if request.method == "POST":

@@ -39,6 +39,7 @@ urlpatterns = [
     path('event/<int:pk>/comment/reply/kr', views.kr_add_reply_to_comment, name='kr_add_reply_to_comment'),
     path('contactus', views.contact, name='contact'),
     path('contactus/kr', views.kr_contact, name='kr_contact'),
-  
+    path('access_denied', views.no_permission, name='no_permission'),
+    path('access_denied/kr', views.kr_no_permission, name='kr_no_permission'),
     
 ]

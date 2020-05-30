@@ -1,0 +1,12 @@
+{% extends 'blog/kr_base.html' %}
+
+{% block content %}
+
+
+<div class="no_permission">
+<p> 이 작업을 수행할 수 있는 권한이 없음 </p>
+</div>
+
+<a href="{% url 'kr_post_list' %}" class="myButton9"> 홈페이지 </a>
+
+{% endblock %}

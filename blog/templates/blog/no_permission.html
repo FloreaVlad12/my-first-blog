@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+<div class="no_permission">
+<p> You do not have permission to perform this task </p>
+</div>
+
+<a href="{% url 'post_list' %}" class="myButton9"> Return home</a>
+
+{% endblock %}
