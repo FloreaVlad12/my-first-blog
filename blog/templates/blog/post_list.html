@@ -2,17 +2,8 @@
 
 {% block content %}
 
-<div class="menu">
-<input type="button" class="btn" value="Sort by">
-    <div class="content">
-      <a href="{% url 'post_list_publish_date_asc' %}">Publish date (ascending)</a>
-        
-         <a href="{% url 'post_list_publish_date_desc' %}">Publish date (descending)</a>
-        
-        
-        
-    </div>
-</div>
+<a href="{% url 'post_list_publish_date_asc' %}" class="myButton11"> Sort by publish date (ascending)</a>
+<a href="{% url 'post_list_publish_date_desc' %}" class="myButton11"> Sort by publish date (descending)</a>
 
 
 
