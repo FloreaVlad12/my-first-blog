@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+<a href="{% url 'picture_list_view_all' %}" class="myButton14"> See pictures while scrilling</a>
+
+
+    {% for picture in pictures %}
+        <div class="post">
+            <div class="date">
+                {{ picture.created_date }}
+            </div>
+                 
+                     <h2 id="title13"><a href="{% url 'picture_detail' pk=picture.pk %}">{{ picture.name }}</a></h2>
+                
+              
+
+        </div>
+    {% endfor %}
+{% endblock %}

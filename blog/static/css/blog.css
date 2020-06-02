@@ -83,6 +83,8 @@ text-transform: none;
 -webkit-text-stroke-color: black;
 }
 
+
+
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
 
@@ -92,6 +94,9 @@ h1, h2, h3, h4 {
     
 
 }
+
+
+
 
 .date {
     color: #828282;
@@ -617,7 +622,7 @@ text-transform: none;
 
 .no_account {
 font-family: "Comic Sans MS", cursive, sans-serif;
-font-size: 14px;
+font-size: 19px;
 letter-spacing: 1px;
 word-spacing: 1.8px;
 color: #2831BB;
@@ -666,6 +671,60 @@ text-transform: none;
 	background-color:#bc80ea;
 }
 .myButton11:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton13 {
+	box-shadow: 0px -1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:5px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 7px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+   
+}
+.myButton13:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.myButton13:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButton14 {
+	box-shadow: 3px 4px 0px 0px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #11bcd6 100%);
+	background-color:#599bb3;
+	border-radius:18px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:16px;
+	font-style:italic;
+	padding:11px 41px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton14:hover {
+	background:linear-gradient(to bottom, #11bcd6 5%, #599bb3 100%);
+	background-color:#11bcd6;
+}
+.myButton14:active {
 	position:relative;
 	top:1px;
 }

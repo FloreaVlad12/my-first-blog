@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import Post, Comment, Event, Comment_event, Reply, Email
+from .models import Post, Comment, Event, Comment_event, Reply, Email, Picture
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm, EmailForm
+from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm, EmailForm, PictureForm
 from django.shortcuts import redirect, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.mail import send_mail
+from lib2to3.fixes.fix_input import context
 
 
 # Create your views here.
@@ -18,14 +19,23 @@ def post_list_publish_date_asc(request):
      posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date' )
      return render(request, 'blog/post_list.html', {'posts': posts})   
  
-def post_list_author_name(request):
-     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('author' )
-     return render(request, 'blog/post_list.html', {'posts': posts}) 
- 
- 
+
 def post_list_publish_date_desc(request):
      posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date' )
      return render(request, 'blog/post_list.html', {'posts': posts})    
+ 
+ 
+def kr_post_list_publish_date_asc(request):
+     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date' )
+     return render(request, 'blog/kr_post_list.html', {'posts': posts})   
+ 
+
+def kr_post_list_publish_date_desc(request):
+     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date' )
+     return render(request, 'blog/kr_post_list.html', {'posts': posts})   
+
+
+
 
 
  
@@ -111,7 +121,7 @@ def comment_remove(request, pk):
     return redirect('post_detail', pk=comment.post.pk)
 
 def kr_post_list(request):
-     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-priority', '-published_date' )
      return render(request, 'blog/kr_post_list.html', {'posts': posts})
  
 def kr_post_detail(request, pk):
@@ -411,4 +421,63 @@ def kr_add_reply_to_comment(request, pk):
             
     else:
         form = ReplyForm()
-    return render(request, 'blog/kr_add_reply_to_comment.html', {'form': form})             
+    return render(request, 'blog/kr_add_reply_to_comment.html', {'form': form}) 
+
+
+#-------------PICTURE----------------------------
+
+@login_required
+def add_picture(request): 
+  
+    if request.method == 'POST': 
+        form = PictureForm(request.POST, request.FILES) 
+  
+        if form.is_valid(): 
+            picture = form.save(commit=False)
+            picture.author = request.user
+            picture.save()
+            return redirect('picture_detail', pk=picture.pk)
+            
+    else: 
+        form = PictureForm() 
+    return render(request, 'blog/picture_form.html', {'form' : form})    
+
+
+def picture_detail(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)
+    is_liked = False
+    if picture.likes.filter(id=request.user.id).exists():
+        is_liked = True
+    context = {
+        'is_liked': is_liked,
+        }    
+    return render(request, 'blog/picture_detail.html', {'picture': picture})
+
+
+def picture_list(request):
+     pictures = Picture.objects.filter().order_by('-created_date')
+     return render(request, 'blog/picture_list.html', {'pictures': pictures})
+ 
+def picture_list_view_all(request):
+     pictures = Picture.objects.filter().order_by('-created_date')
+     return render(request, 'blog/picture_list_view_all.html', {'pictures': pictures}) 
+ 
+@login_required 
+@permission_required('blog.delete_picture', '/access_denied' )
+def picture_remove(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)
+    picture.delete()
+    return redirect('picture_list')
+
+@login_required 
+def like_picture(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)
+    picture.likes.add(request.user)
+    return redirect('picture_detail', pk=pk)
+    
+@login_required 
+def unlike_picture(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)
+    picture.likes.remove(request.user)
+    return redirect('picture_detail', pk=pk)
+         

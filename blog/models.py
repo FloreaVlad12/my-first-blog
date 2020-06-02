@@ -2,6 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.db.models import Count
+from django.contrib.auth.models import User
+from _overlapped import NULL
 
 
 class Post(models.Model):
@@ -14,6 +16,7 @@ class Post(models.Model):
     
     def publish(self):
         self.published_date = timezone.now()
+        priority = 5
         self.save()
 
     def __str__(self):
@@ -82,4 +85,17 @@ class Email(models.Model):
     your_email = models.EmailField()
 
     def __str__(self):
-        return self.text                
+        return self.subject        
+    
+    
+class Picture(models.Model): 
+    name = models.CharField(max_length=50) 
+    image_file = models.ImageField(upload_to='images/')  
+    description = models.TextField()    
+    created_date = models.DateTimeField(default=timezone.now) 
+    author = models.CharField(max_length=100, default="Vlad")
+    likes = models.ManyToManyField(User, related_name='likes', blank=True, default = NULL)
+   
+    
+    def __str__(self):
+        return self.name         

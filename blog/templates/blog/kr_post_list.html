@@ -1,6 +1,10 @@
 {% extends 'blog/kr_base.html' %}
 
 {% block content %}
+
+<a href="{% url 'kr_post_list_publish_date_asc' %}" class="myButton11"> 출판 날짜로 분류하다 (오름차순)</a>
+<a href="{% url 'kr_post_list_publish_date_desc' %}" class="myButton11"> 출판 날짜로 분류하다 (내림차순)</a>
+
     {% for post in posts %}
         <div class="post">
             <div class="date">

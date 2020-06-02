@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+       
+        <a class="btn btn-default" href="{% url 'picture_remove' pk=picture.pk %}" onClick="alert('Are you sure you want to remove this picture?')"><span class="glyphicon glyphicon-remove"></span></a>
+        
+         <h2>{{ picture.name }} </h2>
+        
+    <div class="date">
+        <p> Uploaded on: {{ picture.created_date }}</p>
+    </div>
+
+    
+        <img src="{{ picture.image_file.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
+        
+    
+        
+    </div>
+
+    <div class="no_account">
+  
+   <p>Description: <br><br> {{ picture.description|linebreaksbr }}</p>
+      </div> 
+        
+       {% if is_liked %}
+
+    <a href="{% url 'unlike_picture' pk=picture.pk %}" class="myButton3">Unlike</a>
+
+        {% else %}
+
+<a href="{% url 'like_picture' pk=picture.pk %}" class="myButton3">Like</a>
+        {% endif %}
+    
+<p>Number of likes: {{picture.likes.count}}</p>
+
+
+
+{% endblock %}

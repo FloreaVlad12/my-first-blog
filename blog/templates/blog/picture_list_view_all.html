@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+<a href="{% url 'picture_list' %}" class="myButton14"> Do not show pictures unless I click on title</a>
+
+
+    {% for picture in pictures %}
+        <div class="post">
+            <div class="date">
+                {{ picture.created_date }}
+            </div>
+                 
+                     <h2 id="title13"><a href="{% url 'picture_detail' pk=picture.pk %}">{{ picture.name }}</a></h2>
+            
+                 <img src="{{ picture.image_file.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px; margin-bottom: 120px; margin-top: 40px;" /> 
+              
+
+        </div>
+    {% endfor %}
+{% endblock %}

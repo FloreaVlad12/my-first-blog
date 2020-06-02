@@ -1,12 +1,15 @@
 from django.urls import path
 from . import views
-
+from django.conf import settings 
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
-    path('/publish_date_asc', views.post_list_publish_date_asc, name='post_list_publish_date_asc'),
-    path('/publish_date_desc', views.post_list_publish_date_desc, name='post_list_publish_date_desc'),
-    path('/author_name', views.post_list_author_name, name='post_list_author_name'),
+    path('publish_date_asc', views.post_list_publish_date_asc, name='post_list_publish_date_asc'),
+    path('publish_date_desc', views.post_list_publish_date_desc, name='post_list_publish_date_desc'),
+    path('publish_date_asc/kr', views.kr_post_list_publish_date_asc, name='kr_post_list_publish_date_asc'),
+    path('publish_date_desc/kr', views.kr_post_list_publish_date_desc, name='kr_post_list_publish_date_desc'),
+  
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
@@ -44,5 +47,16 @@ urlpatterns = [
     path('contactus/kr', views.kr_contact, name='kr_contact'),
     path('access_denied', views.no_permission, name='no_permission'),
     path('access_denied/kr', views.kr_no_permission, name='kr_no_permission'),
+    path('picture/new', views.add_picture, name = 'add_picture'), 
+    path('picture/<int:pk>/', views.picture_detail, name='picture_detail'),
+    path('pictures', views.picture_list, name='picture_list'),
+    path('picture/<pk>/remove/', views.picture_remove, name='picture_remove'),
+    path('pictures/view-all', views.picture_list_view_all, name='picture_list_view_all'),
+    path('picture/<pk>/like/', views.like_picture, name='like_picture'),
+    path('picture/<pk>/unlike/', views.unlike_picture, name='unlike_picture'),
     
 ]
+
+if settings.DEBUG: 
+        urlpatterns += static(settings.MEDIA_URL, 
+                              document_root=settings.MEDIA_ROOT) 
