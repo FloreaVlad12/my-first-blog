@@ -20,14 +20,14 @@
     </div>
 
 <hr>
-<h3> 코멘트들 </h3>
+<h3> 모두 댓글 보기 </h3>
 
 
 
 
 
 <div class="add_comment">
-<a class="myButton4" href="{% url 'kr_add_comment_to_event' pk=event.pk %}">새로운 코멘트</a>   </div>
+<a class="myButton4" href="{% url 'kr_add_comment_to_event' pk=event.pk %}">댓글 달기</a>   </div>
 
 {% for comment_event in event.comment_events.all %}
     
@@ -48,7 +48,7 @@
 
 {% for reply in comment_event.replys.all %}
 <div class="nameanddate">
-<p> {{ reply.author }} 씨는 {{ reply.created_date }}에  답했습니다: </p>
+<p> {{ reply.author }}님 {{ reply.created_date }}에  답했습니다: </p>
 </div>
 <p> {{ reply.text }} </p>
 
@@ -59,6 +59,6 @@
     
 
 {% empty %}
-    <p>아직 고멘트가 없습니다 ㅠ</p>
+    <p>아직 댓글이 없습니다 ㅠ</p>
 {% endfor %}
 {% endblock %}

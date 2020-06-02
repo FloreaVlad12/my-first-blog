@@ -3,10 +3,11 @@ from .models import Post, Comment, Event, Comment_event, Reply, Email, Picture
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm, EventForm, Comment_eventForm, ReplyForm, EmailForm, PictureForm
-from django.shortcuts import redirect, HttpResponseRedirect
+from django.shortcuts import redirect, HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.mail import send_mail
 from lib2to3.fixes.fix_input import context
+from django.core.validators import slug_re
 
 
 # Create your views here.
@@ -444,13 +445,8 @@ def add_picture(request):
 
 
 def picture_detail(request, pk):
-    picture = get_object_or_404(Picture, pk=pk)
-    is_liked = False
-    if picture.likes.filter(id=request.user.id).exists():
-        is_liked = True
-    context = {
-        'is_liked': is_liked,
-        }    
+    picture = get_object_or_404(Picture,  pk=pk)   
+      
     return render(request, 'blog/picture_detail.html', {'picture': picture})
 
 
@@ -471,8 +467,8 @@ def picture_remove(request, pk):
 
 @login_required 
 def like_picture(request, pk):
-    picture = get_object_or_404(Picture, pk=pk)
-    picture.likes.add(request.user)
+    picture = get_object_or_404(Picture, pk=pk)  
+    picture.likes.add(request.user)       
     return redirect('picture_detail', pk=pk)
     
 @login_required 
@@ -480,4 +476,39 @@ def unlike_picture(request, pk):
     picture = get_object_or_404(Picture, pk=pk)
     picture.likes.remove(request.user)
     return redirect('picture_detail', pk=pk)
+
+@login_required 
+def like_picture2(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)  
+    picture.likes.add(request.user)       
+    return redirect('picture_detail', pk=pk)
+
+
+
+
+
+@login_required 
+def like_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)  
+    post.likes.add(request.user)       
+    return redirect('post_detail', pk=pk)
+    
+@login_required 
+def unlike_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)  
+    post.likes.remove(request.user)       
+    return redirect('post_detail', pk=pk)
+
+
+@login_required 
+def kr_like_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)  
+    post.likes.add(request.user)       
+    return redirect('kr_post_detail', pk=pk)
+    
+@login_required 
+def kr_unlike_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)  
+    post.likes.remove(request.user)       
+    return redirect('kr_post_detail', pk=pk)
          

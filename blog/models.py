@@ -13,6 +13,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True) 
     priority = models.PositiveSmallIntegerField(default=5)
+    likes = models.ManyToManyField(User, related_name='likes_post', blank=True, default = NULL)
     
     def publish(self):
         self.published_date = timezone.now()

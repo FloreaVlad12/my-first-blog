@@ -14,9 +14,12 @@
                  
                      <h2 id="title13"><a href="{% url 'picture_detail' pk=picture.pk %}">{{ picture.name }}</a></h2>
             
-                 <img src="{{ picture.image_file.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px; margin-bottom: 120px; margin-top: 40px;" /> 
+                 <img src="{{ picture.image_file.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;  margin-top: 20px;" /> 
               
-
+ <a href="{% url 'like_picture2' pk=picture.pk %}" class="myButtonlike2" style="margin-top: 10px; margin-bottom: 20px"> Like</a>
         </div>
+
+  
+
     {% endfor %}
 {% endblock %}

@@ -1,0 +1,812 @@
+h1 a, h2 a {
+    color: #C25100;
+    font-family: 'Lobster';S
+}
+
+
+body {
+    padding-left: 15px;
+
+
+
+background-color: #b1d9d1;
+}
+
+
+.save btn btn-default {
+   color: #6bff0c;
+
+}
+
+
+
+
+.page-header {
+   <!-- background-color: #7dffff;  -->
+    margin-top: 0;
+    padding: 60px 80px 80px 40px;
+
+position: relative;
+}
+
+.page-header .page-header-background {
+    position: absolute;
+ 
+   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob8.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.page-header .content12 {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #1a0000;
+    font-size: 42pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 21px;
+letter-spacing: 0.6px;
+word-spacing: 1.6px;
+color: #5325FF;
+font-weight: normal;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
+}
+
+.title12 {
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
+}
+
+
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    font-size: 26pt;
+    
+
+}
+
+
+
+
+.date {
+    color: #828282;
+    margin-bottom: 0px;
+    margin-top: 100px;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+
+
+
+
+}
+
+.thanks{
+
+padding:200px 150px;
+     background-image: url("https://www.rlf.co.uk/wp-content/uploads/2020/02/UoB-2-scaled.jpg");
+     width: 100%;
+     height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+     position: absolute;
+opacity: 0.2;
+
+
+}
+
+
+
+
+.container2 {
+
+    position: relative;
+}
+.container2 .container-background2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob1.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+   
+}
+.container2 .content2 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #0000ff;
+    float: right;
+    font-size: 30pt;
+    margin-right: 100px;
+
+}
+
+.post {
+    margin-bottom: 70px;
+
+
+}
+
+.post h2 a, .post h2 a:visited {
+    color: #ff8000;
+}
+
+.btn btn-default {
+    color: #78ff50;
+}
+
+.add_comment {
+font-size: 50px;
+}
+
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+.reply {
+    margin-left: 120px;
+}
+
+.nameanddate {
+     font-family: "Courier New", Courier, monospace;
+     font-size: 21px;
+     letter-spacing: -1px;
+     word-spacing: -2px;
+     color: #ff0096;
+     font-weight: 400;
+     text-decoration: underline solid rgb(68, 68, 68);
+     font-style: italic;
+     font-variant: normal;
+     text-transform: none;
+     margin-top: 60px;
+}
+
+.myButton {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:42px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Georgia;
+	font-size:20px;
+	font-weight:bold;
+	font-style:italic;
+	padding:11px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButton2 {
+	box-shadow:inset 28px 29px 14px -12px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:17px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:25px;
+	font-style:italic;
+	padding:21px 47px;
+	text-decoration:none;
+	text-shadow:4px 4px 0px #263666;
+       -webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
+}
+.myButton2:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton3 {
+	box-shadow:inset 0px -2px 0px 0px #efdcfb;
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:3px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 11px;
+	text-decoration:none;
+	text-shadow:2px 9px 2px #9752cc;
+  -webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
+}
+.myButton3:hover {
+	background-color:#bc80ea;
+}
+.myButton3:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButton4 {
+	box-shadow:inset 15px -25px 8px -19px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:21px;
+	border:2px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 59px;
+	text-decoration:none;
+}
+.myButton4:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton4:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButtonKr {
+	box-shadow: 0px 0px 0px 0px #3dc21b;
+	background-color:#44c767;
+	border:2px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 5px 1px #2f6627;
+}
+.myButtonKr:hover {
+	background-color:#5cbf2a;
+}
+.myButtonKr:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+.myButton6 {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:12px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:18px;
+	font-weight:bold;
+	padding:7px 9px;
+	text-decoration:none;
+	text-shadow:2px 4px 0px #810e05;
+      
+}
+.myButton6:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton6:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton7 {
+	box-shadow:inset 0px -18px 14px -7px #276873;
+	background-color:#599bb3;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	font-style:italic;
+	padding:7px 19px;
+	text-decoration:none;
+	text-shadow:0px -6px 0px #3d768a;
+-webkit-text-stroke-width: 0px;
+-webkit-text-stroke-color: black;
+}
+.myButton7:hover {
+	background-color:#408c99;
+}
+.myButton7:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButton8 {
+	box-shadow:inset 1px 7px 0px -2px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:16px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:10px 11px;
+	text-decoration:none;
+	text-shadow:0px 3px 0px #154682;
+       
+}
+.myButton8:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.myButton8:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton9 {
+	box-shadow:inset 0px 47px 32px -10px #e184f3;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:10px;
+	border:2px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:21px;
+	font-weight:bold;
+	font-style:italic;
+	padding:24px 54px;
+	text-decoration:none;
+	text-shadow:0px 5px 2px #9b14b3;
+}
+.myButton9:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;
+}
+.myButton9:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+.container3 {
+
+    position: relative;
+
+}
+.container3 .container-background3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob2.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container3 .content3 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.container4 {
+
+    position: relative;
+
+}
+.container4 .container-background4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob6.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container4 .content4 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.container5 {
+
+    position: relative;
+
+}
+.container5 .container-background5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob7.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container5 .content5 {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.container6 {
+
+    position: relative;
+      
+
+}
+.container6 .container-background6 {
+    position: absolute;
+ 
+   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob8.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container6 .content6 {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+.container7 {
+
+   
+   position:relative;
+
+
+}
+.container7 .container-background7 {
+
+ 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+   position:absolute;
+    padding:0;
+    margin:0;
+
+
+
+    background: url('../images/uob9.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container7 .content7 {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+.container8 .container-background8 {
+    position: absolute;
+ 
+   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../images/uob10.jpg');
+ background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+   
+}
+.container8 .content8 {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.no_permission {
+  font-family: "Lucida Console", Monaco, monospace;
+font-size: 28px;
+letter-spacing: 0.4px;
+word-spacing: 0px;
+color: #DA0627;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: normal;
+text-transform: none;
+
+}
+
+.no_account {
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 19px;
+letter-spacing: 1px;
+word-spacing: 1.8px;
+color: #2831BB;
+font-weight: normal;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
+
+text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+}
+
+
+#hello-user {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size: 25px;
+letter-spacing: -0.6px;
+word-spacing: -0.4px;
+color: #7567cc;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: small-caps;
+text-transform: none;
+
+}
+
+
+.myButton11 {
+	box-shadow:inset 0px 4px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:21px;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Times New Roman;
+	font-size:15px;
+	padding:3px 2px;
+	text-decoration:none;
+	
+}
+.myButton11:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+.myButton11:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton13 {
+	box-shadow: 0px -1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:5px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 7px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+   
+}
+.myButton13:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.myButton13:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.myButton14 {
+	box-shadow: 3px 4px 0px 0px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #11bcd6 100%);
+	background-color:#599bb3;
+	border-radius:18px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:16px;
+	font-style:italic;
+	padding:11px 41px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton14:hover {
+	background:linear-gradient(to bottom, #11bcd6 5%, #599bb3 100%);
+	background-color:#11bcd6;
+}
+.myButton14:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton_like {
+   background: #3D94F6;
+   background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+   background-image: linear-gradient(to bottom, #3D94F6, #1E62D0);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #FFFFFF;
+   font-family: Open Sans;
+   font-size: 60px;
+   font-weight: 500;
+   padding: 51px;
+   box-shadow: 1px 1px 45px 21px #99C624;
+   -webkit-box-shadow: 1px 1px 45px 21px #99C624;
+   -moz-box-shadow: 1px 1px 45px 21px #99C624;
+   text-shadow: 1px 1px 22px #99C624;
+   border: solid #337FED 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.myButton_like:hover {
+   border: solid #99C624 8px;
+   background: #1E62D0;
+   background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+   -webkit-border-radius: 29px;
+   -moz-border-radius: 29px;
+   border-radius: 29px;
+   text-decoration: none;
+}
+
+
+.myButton_unlike {
+   background: #1E62D0;
+   background-image: -webkit-linear-gradient(top, #1E62D0, #FF0000);
+   background-image: -moz-linear-gradient(top, #1E62D0, #FF0000);
+   background-image: -ms-linear-gradient(top, #1E62D0, #FF0000);
+   background-image: -o-linear-gradient(top, #1E62D0, #FF0000);
+   background-image: linear-gradient(to bottom, #1E62D0, #FF0000);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #000000;
+   font-family: Open Sans;
+   font-size: 27px;
+   font-weight: 400;
+   padding: 21px;
+   box-shadow: 1px 1px 45px 21px #DD380D;
+   -webkit-box-shadow: 1px 1px 45px 21px #DD380D;
+   -moz-box-shadow: 1px 1px 45px 21px #DD380D;
+   text-shadow: 1px 1px 22px #DD380D;
+   border: solid #337FED 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.myButton_unlike:hover {
+   border: solid #DD380D 14px;
+   background: #1E62D0;
+   background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+   -webkit-border-radius: 24px;
+   -moz-border-radius: 24px;
+   border-radius: 24px;
+   text-decoration: none;
+}

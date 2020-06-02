@@ -19,21 +19,31 @@
     </div>
 
     <div class="no_account">
-  
+ 
    <p>Description: <br><br> {{ picture.description|linebreaksbr }}</p>
       </div> 
         
-       {% if is_liked %}
+<hr>
 
-    <a href="{% url 'unlike_picture' pk=picture.pk %}" class="myButton3">Unlike</a>
+    <a href="{% url 'like_picture' pk=picture.pk %}" class="myButtonlike"> Like</a>
 
-        {% else %}
 
-<a href="{% url 'like_picture' pk=picture.pk %}" class="myButton3">Like</a>
-        {% endif %}
     
-<p>Number of likes: {{picture.likes.count}}</p>
+    <a href="{% url 'unlike_picture' pk=picture.pk %}" class="myButton_unlike2"> Unlike</a>
 
+      
+
+   
+
+      
+
+
+      
+         
+         
+  <div class="num-of-likes">
+<p>Number of likes: {{picture.likes.count}}</p>
+</div>  
 
 
 {% endblock %}

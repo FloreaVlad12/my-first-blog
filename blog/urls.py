@@ -54,7 +54,11 @@ urlpatterns = [
     path('pictures/view-all', views.picture_list_view_all, name='picture_list_view_all'),
     path('picture/<pk>/like/', views.like_picture, name='like_picture'),
     path('picture/<pk>/unlike/', views.unlike_picture, name='unlike_picture'),
-    
+    path('picture/<pk>/like/', views.like_picture2, name='like_picture2'),
+    path('post/<pk>/like/', views.like_post, name='like_post'),
+    path('post/<pk>/unlike/', views.unlike_post, name='unlike_post'),
+    path('post/<pk>/like/kr', views.kr_like_post, name='kr_like_post'),
+    path('post/<pk>/unlike/kr', views.kr_unlike_post, name='kr_unlike_post'),
 ]
 
 if settings.DEBUG: 

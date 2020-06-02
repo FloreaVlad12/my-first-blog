@@ -18,6 +18,20 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 
+
+<hr>
+
+    <a href="{% url 'like_post' pk=post.pk %}" class="myButtonlikepost"> Like</a>
+   
+    <a href="{% url 'unlike_post' pk=post.pk %}" class="myButton_unlikepost"> Unlike</a>
+
+   
+         
+  <div class="num-of-likes2">
+<p>Number of likes: {{post.likes.count}}</p>
+</div> 
+
+
 <hr>
 <h3> Comment section </h3>
 

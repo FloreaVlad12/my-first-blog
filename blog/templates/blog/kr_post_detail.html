@@ -18,11 +18,27 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 
+
 <hr>
-<h3> 코멘트들: </h3>
+
+    <a href="{% url 'kr_like_post' pk=post.pk %}" class="myButtonlikepost"> 좋아하다</a>
+   
+    <a href="{% url 'kr_unlike_post' pk=post.pk %}" class="myButton_unlikepost"> 취소하다</a>
+
+   
+         
+  <div class="num-of-likes2">
+<p>좋아요 {{post.likes.count}}게</p>
+</div>
+
+
+<hr>
+
+
+<h3> 모두 댓글 보기: </h3>
 
 <div class="add_comment">
-<a class="myButton4" href="{% url 'kr_add_comment_to_post' pk=post.pk %}">코멘트를 하다</a>   </div>
+<a class="myButton4" href="{% url 'kr_add_comment_to_post' pk=post.pk %}">댓글 달기</a>   </div>
 
 {% for comment in post.comments.all %}
     {% if user.is_authenticated or comment.approved_comment %}
@@ -39,6 +55,6 @@
     </div>
     {% endif %}
 {% empty %}
-    <p>아직 코맨트가 없습니다</p>
+    <p>아직 댓글이 없습니다</p>
 {% endfor %}
 {% endblock %}

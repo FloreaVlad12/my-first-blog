@@ -705,7 +705,7 @@ text-transform: none;
 
 
 .myButton14 {
-	box-shadow: 3px 4px 0px 0px #276873;
+  	box-shadow: 3px 4px 0px 0px #276873;
 	background:linear-gradient(to bottom, #599bb3 5%, #11bcd6 100%);
 	background-color:#599bb3;
 	border-radius:18px;
@@ -729,3 +729,287 @@ text-transform: none;
 	top:1px;
 }
 
+
+
+.myButtonlike {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 22px 57px;
+    border: 7px solid #4c18d9;
+    border-radius: 27px;
+    background: #8e2dff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8e2dff), to(#4c18d9));
+    background: -moz-linear-gradient(top, #8e2dff, #4c18d9);
+    background: linear-gradient(to bottom, #8e2dff, #4c18d9);
+    -webkit-box-shadow: #aa36ff -1px 2px 35px 4px;
+    -moz-box-shadow: #aa36ff -1px 2px 35px 4px;
+    box-shadow: #aa36ff -1px 2px 35px 4px;
+    text-shadow: #2d0e80 1px 5px 1px;
+    font: normal normal bold 16px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButtonlike:hover,
+.myButtonlike:focus {
+    border: 7px solid #591cff;
+    background: #aa36ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#aa36ff), to(#5b1dff));
+    background: -moz-linear-gradient(top, #aa36ff, #5b1dff);
+    background: linear-gradient(to bottom, #aa36ff, #5b1dff);
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButtonlike:active {
+    background: #4c18d9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4c18d9), to(#4c18d9));
+    background: -moz-linear-gradient(top, #4c18d9, #4c18d9);
+    background: linear-gradient(to bottom, #4c18d9, #4c18d9);
+}
+.myButtonlike:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACKklEQVRIibWVvWsUURTFf3fygaSQZDohoAgREZFVJIjNIk5QG/8FcRYsbSJYWq2gQWNnlemjjWC5EwhWFkEsLCQoWFikcCcaZZEgcyx2ZvP27VeK7G3emffunXvuuY93DQgYo5U/zwec50eB/QqCo8RWgNw7GFQRYRRfAq4CaZYmnwf5lVYmOJSF1+MZjCbYFmhexsJuI/k3LMbtga9f3oON80ALtARMm6gM9YfcZ98vkYsrwKcsTf4CX4BTw9gDTHqVjLIqsAWA0UIc6xPfhcsEg5rcweFSfBlxG3ERADEL/PTie2L7Me+RKIziecQ6UM82ku25KJ4GzhiMvEVdEoVR7b7BNay9KWkfbB1UBzZN9hQIDFaAWWEr4VKt7S4Q2gFWszTZHiCRngl7DDRBYHYL6TXw3IyHzXStvJIbZvbVZar2UgXeAgulRJN0W2DGWrOx9q2QZg5jL2sky65TliZvfClOVu8Ev6cmvgMvXdJugsDMOhgolLIWh7hle1MTkwarwCPX3w3MJZW15kAu58xZ++LdNNkHNoET7r4vUUn7wA6yDH01wyi+B9yk3YfO/miJ7OB7hP0BfhQP4NFKFEZxBVgGPvg+vcw8iSRFYRQ/CKPacZeMh68UoXd9H3ceBGEU/zKz90CrcDoraQeYAU4DH82bFUWVF4AnWZq88Pm6PciBG5IWy15IaoBeGWTCFoFz6t+POrneedV13qWxDv2uWzSuJGMd+v8BKUbbE4UWs5cAAAAASUVORK5CYII=") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.myButton_unlike2 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 21px;
+    border: 1px solid #a12727;
+    border-radius: 8px;
+    background: #ff4a4a;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff4a4a), to(#992727));
+    background: -moz-linear-gradient(top, #ff4a4a, #992727);
+    background: linear-gradient(to bottom, #ff4a4a, #992727);
+    -webkit-box-shadow: #ff5959 -1px 2px 50px 10px;
+    -moz-box-shadow: #ff5959 -1px 2px 50px 10px;
+    box-shadow: #ff5959 -1px 2px 50px 10px;
+    text-shadow: #591717 1px 5px 1px;
+    font: normal normal bold 16px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButton_unlike2:hover,
+.myButton_unlike2:focus {
+    background: #ff5959;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff5959), to(#b62f2f));
+    background: -moz-linear-gradient(top, #ff5959, #b62f2f);
+    background: linear-gradient(to bottom, #ff5959, #b62f2f);
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButton_unlike2:active {
+    background: #982727;
+    background: -webkit-gradient(linear, left top, left bottom, from(#982727), to(#982727));
+    background: -moz-linear-gradient(top, #982727, #982727);
+    background: linear-gradient(to bottom, #982727, #982727);
+}
+.myButton_unlike2:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAD+ElEQVRIibVVS2wbVRQ9b362p87P+ThxPhPSoGaBEEKARISEYAEUUGkt0WwcpLJDAiQECFiwQghV3cEOWETESAga01I2SF2gqrRSAVFQSNN8HJs4qZu/Hde/ee9dFsmYsfOBCHjS01zNO/ec+85c3WEAFPyPyyGXe5zLfxuzbREJAP2nLrwtuJiYGz3+jasA2ff8l4rwaAMAHtd1wwII3LaTBHyfLPEJfHVSuvHuuErgoTeu/lBX13Df7MzNo4nRE5eOvHhOKdk0GGhuOR0MdgwGmltgGB4AQLlcwtraKtK3Fi6vr628nhgNX9vNAkcAADD4zs/Jw/0DXXPx6Y35ZPwxw+M5dlff3e8G2zs1xnb3kIiwuDBfnotPvxQfOTayl4C0IjGjp7e/0G31KSBCfGYy3xoMmXX1DRWi9bVlbGYzWSIqen2+tpbWdmiaDgBYWUrL6ZvjQ3OfHT/rtsjdQSHdMBQhJQQRrMNHTNNfByElstkMxn/98eKN8esPpxenmq58cH/H7NSN7us/Xf1weSkthSQ0tQSVjs6eT6xILOS+geJ69mi6B0JS1S6VbUyO/xLbzGwcTUbD12ZHhgAAyWh4caOovjYz9fup1ZXbUkiJYMhq9Hh9b7p53W3apeoeCEFVmzEVwZD1FBgb3MY5XSKXPn9SKgLR+cRM1LY5wFQ0Blpf6ImMaQ6mYhFjrEfVDAgpd+xAsNNs7ej+2hqO3Vv7EWejz6FYyJ9ZW12GkBKmvzHAwB7YYZHh8VpErPoGcutp2xwNgfaAadZf6Iqc01y5CgCUTW3izmYmLSTB8JoAcI+DqVyFKWpoffU2bLsEwfmG4PYfnJdTdqmYEtyeF4KniChuw6xY5JDc+viYbHn1ckIIameKDgBtDsYRQDGfe2UhMfkWA1KJaDhXa8U+a0uISOOCg4gAgDvvKwLJaDjlSjrQALSGz2qKqg0IbsMuFwEg5XC4iao65EAxKc96fX6/4DYKuQwAOGPjL4tqhP5xbEXG6k1/w2lV18G5jXwu81syGp5yzt0CB/4vWJFYwPD4xvwNzf2C27BLRRTubJ5xc7kF9hy5tXFPZMzLGDvp9dW9f6i+qYukBBcC2Y3liyTpi23cznG9R5W9APoANDLGelVVf1DTjScMrxlQtwcdESG/uT5ZLhUeTUbDS+58t8AOi6xI7BGP79B3qqZ7GWNQFBWMVcOk4CgWcpe4XR6qJf9bi5iiPKOquhdgIAKEEADEVtVSgNvlNLdL7xHo02Q0XN7N0n27iKQ8Xy7lX2aKaoIIRFQEyUUp5RVJ4jwj9m0ieqK4W26lyP0sAgBrONYOQhuAHIAVvcmbnfno6d2ge65aYuW/jP8E5HoU02Yfcs4AAAAASUVORK5CYII=") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+
+.num-of-likes{
+    
+    @import url('https://fonts.googleapis.com/css?family=Chicle');
+
+    font-family: Chicle, cursive;
+    font-style: italic;
+    text-align: left;
+    font-size: 20px;
+    color: rgba(222, 255, 36, 0.69);
+    background-color: rgb(63, 141, 68);
+    text-shadow: rgb(218, 139, 182) 2px 2px 2px;
+
+
+}
+
+.num-of-likes2{
+    
+    @import url('https://fonts.googleapis.com/css?family=Chicle');
+
+    font-family: Chicle, cursive;
+    font-style: italic;
+    text-align: left;
+    font-size: 22px;
+    color: rgba(222, 255, 36, 0.69);
+    text-shadow: rgb(218, 139, 182) 2px 2px 2px;
+
+
+}
+
+.myButtonlike2 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 7px;
+    border: 0px solid #16ae24;
+    border-radius: 0px;
+    background: #25ff3b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#25ff3b), to(#16ae24));
+    background: -moz-linear-gradient(top, #25ff3b, #16ae24);
+    background: linear-gradient(to bottom, #25ff3b, #16ae24);
+    font: normal normal bold 11px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButtonlike2:hover,
+.myButtonlike2:focus {
+    border: 0px solid ##20f933;
+    background: #2cff47;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2cff47), to(#1ad12b));
+    background: -moz-linear-gradient(top, #2cff47, #1ad12b);
+    background: linear-gradient(to bottom, #2cff47, #1ad12b);
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButtonlike2:active {
+    background: #16ae24;
+    background: -webkit-gradient(linear, left top, left bottom, from(#16ae24), to(#16ae24));
+    background: -moz-linear-gradient(top, #16ae24, #16ae24);
+    background: linear-gradient(to bottom, #16ae24, #16ae24);
+}
+.myButtonlike2:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEdUlEQVRIiY2WXWgcVRTHf+fuJk3jtjtbY7HazOxOotCAWsEXxSpSBKulapAgEn2xUjBoxdKWoCAiEihKfWjxAxWUUkSbWkQQlfig4IMEazGkSNO7O9OVQilJJtZ23aZzfJiZdFNT6oXLvXPuuefjf8/HCGBYYlTcCkLsAwPARqAPWJ0enwEmgTHgc1Brw3ApMUiqIG5V5LueD4wAj4lIHgBVFM6lLJ0iYhKyzgNHFHZXw8C2yIkB06qAvhv6TGP534Mg+wUKijYSCxkVGFeYTS8XgNuBR4FBEAf0HDB04WLzwOnTpzOD4wUFqfBdICMCKPoZsNOGQX1J3xegLDuCvga8CGJAhy9cbO5JlZBLYZIVXZ2DIPuAedDtmjPD1aD2V3Z+tTkbzf4zE0XflYrOMWCLCJvyJmdnouh3QAQwCeZyNHFdtxPn9tm6XXAzNfaae9/1NgNfAg3gDhsGNldxKyLoeyDrQQ9JW36XDWwM4LquXF90VpSKznVFx2nMRpFmweF3e20lx8nNRFEMKMBMFE2Vis4yQTYCN69ynFHxXa8X5LigsQq32CDBvMf1Cgr7gSeAduAHVJ9VI2dEeTN5XAAOqcjOalBrpG/SIaInBbpQ1hlgQCCvcNgGQRbMscJe4EngQ2A30IvIN6J8IiIvIzIFTIjI86K6N4OpGtbOo3wAklcYMCRJBDCaCffdSh5kEHjHhsELNgzeEuRuoAn0q+oO1XgD+dyDqvop8Ezv2u58S3CNqirAxjxJhgIynj4YcRwbY8QAJzLaybB2xnfLD4D6Ngx+yyT5rldHMLG2ZSQDTAFzQJ8BVivaRHU6c7NWD5qgXwNDfrdXyOg2rM3aMPg187TH9VYBW1G+sn/a+YweG2kA00DXQlqrLIRdtu4QuAnhi4rndbTQU+EVo/Au0Am80nq3o3EZLUNSuDoEVqXfBjA2DGoKjwB3iTLqu+WV2ZnneUaJXwX6gSEbBlOtd5vtzXbAAc4aYFIQBNa3WBkDsQ2DcWCTwD2g3/qud2NPd9nklDeA14FhzZkDGf/lu+KnCiYMSclF4fErICJV8ovC/UAXcFRFx4BdwHYbBnuq1eoi/nTdklQSxqTH9XoVjgNNlIo9FZxliZFApG8D9wLbbBj8uBRfxfXyIvwhsBZlnVHUAkcQ6UQYaYVoMVy1OYnzzxFzWyr8PzwAAi+BlFU5jBErgKm4XlmEYygF4GkbBgevgOp/Dd/17gO+Jyl2d9owsDlAZqNoulR0TonQDzxcKjpTM1E0yTVKdev0XW8DSSUtAFttGPwESNYPtKOzcyJvcg0RHhKkv1QsdpWKzs8zUXSBpFpK6tWivd9dXlZyijuBj1Lhu5vxpffn5uagtaMBrFmzxixva38K2A+yEnQa+BgYVZgUOA8So9qBcCuwGWGbqKxVdA4YasaXDtbr9QV4r9b0y8BIAlnS9FU1TX8BdCVQEBFA51U5DAzbMKhd+S6LPEiHAeIezzMoviIDoNlvS1fKcxaYAMYEDhkj9kSttmQH/BdWuebKVwEqvgAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+
+
+.myButtonlikepost {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 33px;
+    border: 3px solid #0639cf;
+    border-radius: 100px;
+    background: #05fae6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#05fae6), to(#85b897));
+    background: -moz-linear-gradient(top, #05fae6, #85b897);
+    background: linear-gradient(to bottom, #05fae6, #85b897);
+    font: normal normal normal 13px tahoma;
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.myButtonlikepost:hover {
+    border: 3px solid #0a5bff;
+    background: #06ffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#06ffff), to(#a0ddb5));
+    background: -moz-linear-gradient(top, #06ffff, #a0ddb5);
+    background: linear-gradient(to bottom, #06ffff, #a0ddb5);
+    color: #111111;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.myButtonlikepost:active {
+    background: #03968a;
+    background: -webkit-gradient(linear, left top, left bottom, from(#03968a), to(#85b897));
+    background: -moz-linear-gradient(top, #03968a, #85b897);
+    background: linear-gradient(to bottom, #03968a, #85b897);
+    text-transform: uppercase
+}
+.myButtonlikepost:focus {
+    text-transform: uppercase
+}
+.myButtonlikepost:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABIUlEQVRIibWVS2oCQRCGPxtxIbMUlzmGyxwipwg5j0i2HkZceAoJIYgJSRDFbFoXUx3Lnu5xZuwuKKbm0fXXX6/pAYaM4pzbyHubwvYZmNR2HYAvz8AJWAD9mu8qDpvoI/AnAHugaHiuQitE8wH4EOcaIHS+Yt/qoiGwUs47AdTp3HN+V4r8+5eA884MCqWGskvWEYCYboCnEEABbCWyrQLatwRwIP8p0r08FL1XxpRTbACbYw/9yNVCi2lsIVO8xnE1cPl2HdKlBt/ASPlNvqpnwKfYV9s0BYNfygJfDVpKBq8SvVXR2zoGA+C9YfRfEn1QYoNmKKfyTZ6HdAcsgQmRXdTjUmg9ZAcuw9IXNiGxwFGlxITsrD99PWjZgLL+9M8W9YtWqxY9CAAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+
+.myButton_unlikepost {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 33px;
+    border: 3px solid #ff0000;
+    border-radius: 100px;
+    background: #ff894b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff894b), to(#cc542e));
+    background: -moz-linear-gradient(top, #ff894b, #cc542e);
+    background: linear-gradient(to bottom, #ff894b, #cc542e);
+    font: normal normal normal 13px tahoma;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.myButton_unlikepost:hover {
+    background: #ffa45a;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffa45a), to(#f56537));
+    background: -moz-linear-gradient(top, #ffa45a, #f56537);
+    background: linear-gradient(to bottom, #ffa45a, #f56537);
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.myButton_unlikepost:active {
+    background: #cc542e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cc542e), to(#cc542e));
+    background: -moz-linear-gradient(top, #cc542e, #cc542e);
+    background: linear-gradient(to bottom, #cc542e, #cc542e);
+    text-transform: uppercase
+}
+.myButton_unlikepost:focus {
+    text-transform: uppercase
+}
+.myButton_unlikepost:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAD+ElEQVRIibVVS2wbVRQ9b362p87P+ThxPhPSoGaBEEKARISEYAEUUGkt0WwcpLJDAiQECFiwQghV3cEOWETESAga01I2SF2gqrRSAVFQSNN8HJs4qZu/Hde/ee9dFsmYsfOBCHjS01zNO/ec+85c3WEAFPyPyyGXe5zLfxuzbREJAP2nLrwtuJiYGz3+jasA2ff8l4rwaAMAHtd1wwII3LaTBHyfLPEJfHVSuvHuuErgoTeu/lBX13Df7MzNo4nRE5eOvHhOKdk0GGhuOR0MdgwGmltgGB4AQLlcwtraKtK3Fi6vr628nhgNX9vNAkcAADD4zs/Jw/0DXXPx6Y35ZPwxw+M5dlff3e8G2zs1xnb3kIiwuDBfnotPvxQfOTayl4C0IjGjp7e/0G31KSBCfGYy3xoMmXX1DRWi9bVlbGYzWSIqen2+tpbWdmiaDgBYWUrL6ZvjQ3OfHT/rtsjdQSHdMBQhJQQRrMNHTNNfByElstkMxn/98eKN8esPpxenmq58cH/H7NSN7us/Xf1weSkthSQ0tQSVjs6eT6xILOS+geJ69mi6B0JS1S6VbUyO/xLbzGwcTUbD12ZHhgAAyWh4caOovjYz9fup1ZXbUkiJYMhq9Hh9b7p53W3apeoeCEFVmzEVwZD1FBgb3MY5XSKXPn9SKgLR+cRM1LY5wFQ0Blpf6ImMaQ6mYhFjrEfVDAgpd+xAsNNs7ej+2hqO3Vv7EWejz6FYyJ9ZW12GkBKmvzHAwB7YYZHh8VpErPoGcutp2xwNgfaAadZf6Iqc01y5CgCUTW3izmYmLSTB8JoAcI+DqVyFKWpoffU2bLsEwfmG4PYfnJdTdqmYEtyeF4KniChuw6xY5JDc+viYbHn1ckIIameKDgBtDsYRQDGfe2UhMfkWA1KJaDhXa8U+a0uISOOCg4gAgDvvKwLJaDjlSjrQALSGz2qKqg0IbsMuFwEg5XC4iao65EAxKc96fX6/4DYKuQwAOGPjL4tqhP5xbEXG6k1/w2lV18G5jXwu81syGp5yzt0CB/4vWJFYwPD4xvwNzf2C27BLRRTubJ5xc7kF9hy5tXFPZMzLGDvp9dW9f6i+qYukBBcC2Y3liyTpi23cznG9R5W9APoANDLGelVVf1DTjScMrxlQtwcdESG/uT5ZLhUeTUbDS+58t8AOi6xI7BGP79B3qqZ7GWNQFBWMVcOk4CgWcpe4XR6qJf9bi5iiPKOquhdgIAKEEADEVtVSgNvlNLdL7xHo02Q0XN7N0n27iKQ8Xy7lX2aKaoIIRFQEyUUp5RVJ4jwj9m0ieqK4W26lyP0sAgBrONYOQhuAHIAVvcmbnfno6d2ge65aYuW/jP8E5HoU02Yfcs4AAAAASUVORK5CYII=") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
