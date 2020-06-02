@@ -13,7 +13,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True) 
     priority = models.PositiveSmallIntegerField(default=5)
-    likes = models.ManyToManyField(User, related_name='likes_post', blank=True, default = NULL)
+    likes = models.ManyToManyField(User, related_name='likes_post', blank=True)
     
     def publish(self):
         self.published_date = timezone.now()
@@ -95,7 +95,7 @@ class Picture(models.Model):
     description = models.TextField()    
     created_date = models.DateTimeField(default=timezone.now) 
     author = models.CharField(max_length=100, default="Vlad")
-    likes = models.ManyToManyField(User, related_name='likes', blank=True, default = NULL)
+    likes = models.ManyToManyField(User, related_name='likes', blank=True)
    
     
     def __str__(self):
