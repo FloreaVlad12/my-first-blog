@@ -59,6 +59,14 @@ urlpatterns = [
     path('post/<pk>/unlike/', views.unlike_post, name='unlike_post'),
     path('post/<pk>/like/kr', views.kr_like_post, name='kr_like_post'),
     path('post/<pk>/unlike/kr', views.kr_unlike_post, name='kr_unlike_post'),
+    path('picture/new/kr', views.kr_add_picture, name = 'kr_add_picture'), 
+    path('picture/<int:pk>/kr', views.kr_picture_detail, name='kr_picture_detail'),
+    path('pictures/kr', views.kr_picture_list, name='kr_picture_list'),
+    path('picture/<pk>/remove/kr', views.kr_picture_remove, name='kr_picture_remove'),
+    path('pictures/view-all/kr', views.kr_picture_list_view_all, name='kr_picture_list_view_all'),
+    path('picture/<pk>/like/kr', views.kr_like_picture, name='kr_like_picture'),
+    path('picture/<pk>/unlike/kr', views.kr_unlike_picture, name='kr_unlike_picture'),
+    path('picture/<pk>/like/kr', views.kr_like_picture2, name='kr_like_picture2'),
 ]
 
 if settings.DEBUG: 

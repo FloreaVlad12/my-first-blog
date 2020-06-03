@@ -7,7 +7,7 @@ from django.shortcuts import redirect, HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.mail import send_mail
 from lib2to3.fixes.fix_input import context
-from django.core.validators import slug_re
+
 
 
 # Create your views here.
