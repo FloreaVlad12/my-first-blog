@@ -1,0 +1,43 @@
+{% extends 'blog/kr_base.html' %}
+
+{% block content %}
+    <div class="post">
+       
+        <a class="btn btn-default" href="{% url 'kr_picture_remove' pk=picture.pk %}" onClick="alert('이 사진을 진짜 삭제하고 싶습니까?')"><span class="glyphicon glyphicon-remove"></span></a>
+        
+         <h2>{{ picture.name }} </h2>
+        
+    <div class="date">
+        <p>업로드 날짜: {{ picture.created_date }}</p>
+    </div>
+
+    
+        <img src="{{ picture.image_file.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
+        
+    
+        
+    </div>
+
+    <div class="no_account">
+ 
+   <p>설명: <br><br> {{ picture.description|linebreaksbr }}</p>
+      </div> 
+        
+<hr>
+
+    <a href="{% url 'kr_like_picture' pk=picture.pk %}" class="myButtonlike"> 좋아하다</a>
+
+
+    
+    <a href="{% url 'kr_unlike_picture' pk=picture.pk %}" class="myButton_unlike2"> 취소하다</a>
+
+
+      
+         
+         
+  <div class="num-of-likes">
+<p>좋아요 {{picture.likes.count}}게</p>
+</div>  
+
+
+{% endblock %}

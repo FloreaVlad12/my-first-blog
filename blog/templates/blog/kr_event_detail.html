@@ -19,7 +19,18 @@
         <p>{{ event.description|linebreaksbr }}</p>
     </div>
 
+
 <hr>
+<p>이번 행사에 참여하고 싶습니까? 아래 버튼을 클릭해 알려줘!</p>
+<a href="{% url 'kr_interested_in_participating_at_event' pk=event.pk %}" class="myButton-event-participate">네, 관심이 있습니다</a>
+
+ <div class="num-of-participants">
+<p>{{event.participants.count}}명이 관심이 있습니다</p>
+</div>
+
+<hr>
+
+
 <h3> 모두 댓글 보기 </h3>
 
 

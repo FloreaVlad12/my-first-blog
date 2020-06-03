@@ -580,4 +580,24 @@ def kr_unlike_post(request, pk):
     post = get_object_or_404(Post, pk=pk)  
     post.likes.remove(request.user)       
     return redirect('kr_post_detail', pk=pk)
+
+
+#------------event participants----------
+
+
+@login_required 
+def interested_in_participating_at_event(request, pk):
+    event = get_object_or_404(Event, pk=pk)  
+    event.participants.add(request.user)       
+    return redirect('event_detail', pk=pk)
+
+@login_required 
+def kr_interested_in_participating_at_event(request, pk):
+    event = get_object_or_404(Event, pk=pk)  
+    event.participants.add(request.user)       
+    return redirect('kr_event_detail', pk=pk)
+
+
+
+
          

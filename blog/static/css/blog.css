@@ -1013,3 +1013,66 @@ text-transform: none;
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAD+ElEQVRIibVVS2wbVRQ9b362p87P+ThxPhPSoGaBEEKARISEYAEUUGkt0WwcpLJDAiQECFiwQghV3cEOWETESAga01I2SF2gqrRSAVFQSNN8HJs4qZu/Hde/ee9dFsmYsfOBCHjS01zNO/ec+85c3WEAFPyPyyGXe5zLfxuzbREJAP2nLrwtuJiYGz3+jasA2ff8l4rwaAMAHtd1wwII3LaTBHyfLPEJfHVSuvHuuErgoTeu/lBX13Df7MzNo4nRE5eOvHhOKdk0GGhuOR0MdgwGmltgGB4AQLlcwtraKtK3Fi6vr628nhgNX9vNAkcAADD4zs/Jw/0DXXPx6Y35ZPwxw+M5dlff3e8G2zs1xnb3kIiwuDBfnotPvxQfOTayl4C0IjGjp7e/0G31KSBCfGYy3xoMmXX1DRWi9bVlbGYzWSIqen2+tpbWdmiaDgBYWUrL6ZvjQ3OfHT/rtsjdQSHdMBQhJQQRrMNHTNNfByElstkMxn/98eKN8esPpxenmq58cH/H7NSN7us/Xf1weSkthSQ0tQSVjs6eT6xILOS+geJ69mi6B0JS1S6VbUyO/xLbzGwcTUbD12ZHhgAAyWh4caOovjYz9fup1ZXbUkiJYMhq9Hh9b7p53W3apeoeCEFVmzEVwZD1FBgb3MY5XSKXPn9SKgLR+cRM1LY5wFQ0Blpf6ImMaQ6mYhFjrEfVDAgpd+xAsNNs7ej+2hqO3Vv7EWejz6FYyJ9ZW12GkBKmvzHAwB7YYZHh8VpErPoGcutp2xwNgfaAadZf6Iqc01y5CgCUTW3izmYmLSTB8JoAcI+DqVyFKWpoffU2bLsEwfmG4PYfnJdTdqmYEtyeF4KniChuw6xY5JDc+viYbHn1ckIIameKDgBtDsYRQDGfe2UhMfkWA1KJaDhXa8U+a0uISOOCg4gAgDvvKwLJaDjlSjrQALSGz2qKqg0IbsMuFwEg5XC4iao65EAxKc96fX6/4DYKuQwAOGPjL4tqhP5xbEXG6k1/w2lV18G5jXwu81syGp5yzt0CB/4vWJFYwPD4xvwNzf2C27BLRRTubJ5xc7kF9hy5tXFPZMzLGDvp9dW9f6i+qYukBBcC2Y3liyTpi23cznG9R5W9APoANDLGelVVf1DTjScMrxlQtwcdESG/uT5ZLhUeTUbDS+58t8AOi6xI7BGP79B3qqZ7GWNQFBWMVcOk4CgWcpe4XR6qJf9bi5iiPKOquhdgIAKEEADEVtVSgNvlNLdL7xHo02Q0XN7N0n27iKQ8Xy7lX2aKaoIIRFQEyUUp5RVJ4jwj9m0ieqK4W26lyP0sAgBrONYOQhuAHIAVvcmbnfno6d2ge65aYuW/jP8E5HoU02Yfcs4AAAAASUVORK5CYII=") no-repeat left center transparent;
     background-size: 100% 100%;
 }
+
+
+
+.myButton-event-participate {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 80px;
+    border: 6px solid #095ea8;
+    border-radius: 43px;
+    background: #46ff0e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#46ff0e), to(#2ba908));
+    background: -moz-linear-gradient(top, #46ff0e, #2ba908);
+    background: linear-gradient(to bottom, #46ff0e, #2ba908);
+    -webkit-box-shadow: #aaff0d 0px 0px 38px 7px;
+    -moz-box-shadow: #aaff0d 0px 0px 38px 7px;
+    box-shadow: #aaff0d 0px 0px 38px 7px;
+    text-shadow: #1f7906 2px -2px 0px;
+    font: italic normal bold 22px tahoma;
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButton-event-participate:hover,
+.myButton-event-participate:focus {
+    border: 6px solid #0e96ff;
+    background: #54ff11;
+    background: -webkit-gradient(linear, left top, left bottom, from(#54ff11), to(#34cb0a));
+    background: -moz-linear-gradient(top, #54ff11, #34cb0a);
+    background: linear-gradient(to bottom, #54ff11, #34cb0a);
+    color: #ffffff;
+    text-decoration: none;
+}
+.myButton-event-participate:active {
+    background: #2ba908;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2ba908), to(#2ba908));
+    background: -moz-linear-gradient(top, #2ba908, #2ba908);
+    background: linear-gradient(to bottom, #2ba908, #2ba908);
+}
+.myButton-event-participate:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABmUlEQVRIia2Wv27CMBDGf8nGXmVjQVGHSjwAZuwrVJ0qJHYeAPEGwGuwUHa2vkbHrkhVIUGMUF+HxqnjOPxJY+lTLOfy3d1n+y4BEFI9YuAJeAQegChb/wTegTfgFfg4w5E7CC3EwAo4AnIBx8w2dnhybjuDEBgAhyuIXRyybwvkbgbjGsQuxk7QeUqDBsgNBhZvrnkdWc7J1bEzWDVIbrAyGdxz3WnxIggCGQ6H0mq1fKcrBpj8h3w2m4nWWtbrtc/JBH4vSy3y+XwuWmvRWkuSJNLtdl27N4CNjyCKoouRm5GmqfR6PZ/tBuDbfTEajWS73YpSyks+nU4LkfvsrH0oOlBKyel0Eq21pGkq/X6/UpbdblcVecHBxhehnb5SqrSeJMkl8lyi0ibbGhsZFovFtbKUNtl7TF2tb5CldExjKi5aTVlKF+1sqTBy3SCLwZJri10QBNJut28h3+MUO2i2XL/glGvzbLLhlDqamddtmXsr8sLwNf0OtzX9ZfZN6CLIJtpxqC1Hz/z9ttxlNl+Uf1u0wxUC+getM1Y7QZtVmwAAAABJRU5ErkJggg==") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+
+
+.num-of-participants{
+    
+    @import url('https://fonts.googleapis.com/css?family=Kotta+One');
+    font-family: "Kotta One", serif;
+    text-align: left;
+    font-size: 23px;
+    color: rgb(227, 148, 74);
+    margin-top: 15px;
+
+}

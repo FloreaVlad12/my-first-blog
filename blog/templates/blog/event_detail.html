@@ -19,6 +19,15 @@
         <p>{{ event.description|linebreaksbr }}</p>
     </div>
 
+
+<hr>
+<p>Interested in participating at this event? Let us know by clicking the button below!</p>
+<a href="{% url 'interested_in_participating_at_event' pk=event.pk %}" class="myButton-event-participate"> I'm interested</a>
+
+ <div class="num-of-participants">
+<p>People interested: {{event.participants.count}}</p>
+</div>
+
 <hr>
 <h3> Comment section </h3>
 

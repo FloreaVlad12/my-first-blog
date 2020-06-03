@@ -1,0 +1,25 @@
+{% extends 'blog/kr_base.html' %}
+
+{% block content %}
+
+
+<a href="{% url 'kr_picture_list' %}" class="myButton14">  사진의 표제를 클릭하면서 사진을 보기 </a>
+
+
+    {% for picture in pictures %}
+        <div class="post">
+            <div class="date">
+            <p> 날짜: {{ picture.created_date }} </p>
+            </div>
+                 
+                     <h2 id="title13"><a href="{% url 'kr_picture_detail' pk=picture.pk %}">{{ picture.name }}</a></h2>
+            
+                 <img src="{{ picture.image_file.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;  margin-top: 20px;" /> 
+              
+ <a href="{% url 'kr_like_picture2' pk=picture.pk %}" class="myButtonlike2" style="margin-top: 10px; margin-bottom: 20px"> 좋아하다 </a>
+        </div>
+
+  
+
+    {% endfor %}
+{% endblock %}

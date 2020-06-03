@@ -67,6 +67,8 @@ urlpatterns = [
     path('picture/<pk>/like/kr', views.kr_like_picture, name='kr_like_picture'),
     path('picture/<pk>/unlike/kr', views.kr_unlike_picture, name='kr_unlike_picture'),
     path('picture/<pk>/like/kr', views.kr_like_picture2, name='kr_like_picture2'),
+    path('event/<pk>/participate/', views.interested_in_participating_at_event, name='interested_in_participating_at_event'),
+    path('event/<pk>/participate/kr', views.kr_interested_in_participating_at_event, name='kr_interested_in_participating_at_event'),
 ]
 
 if settings.DEBUG: 

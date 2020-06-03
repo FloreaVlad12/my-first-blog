@@ -47,6 +47,7 @@ class Event(models.Model):
      venue = models.CharField(max_length=120)
      manager = models.CharField(max_length = 60)
      description = models.TextField(blank=True)
+     participants = models.ManyToManyField(User, related_name='participants_event', blank=True)
      
      def __str__(self):
          return self.name  
