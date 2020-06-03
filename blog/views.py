@@ -484,7 +484,75 @@ def like_picture2(request, pk):
     return redirect('picture_detail', pk=pk)
 
 
+#---------------------------------------------
+#------------KR PICTURE VIEWS-----------------
+#---------------------------------------------
 
+
+
+
+@login_required
+def kr_add_picture(request): 
+  
+    if request.method == 'POST': 
+        form = PictureForm(request.POST, request.FILES) 
+  
+        if form.is_valid(): 
+            picture = form.save(commit=False)
+            picture.author = request.user
+            picture.save()
+            return redirect('kr_picture_detail', pk=picture.pk)
+            
+    else: 
+        form = PictureForm() 
+    return render(request, 'blog/kr_picture_form.html', {'form' : form})    
+
+
+def kr_picture_detail(request, pk):
+    picture = get_object_or_404(Picture,  pk=pk)   
+      
+    return render(request, 'blog/kr_picture_detail.html', {'picture': picture})
+
+
+def kr_picture_list(request):
+     pictures = Picture.objects.filter().order_by('-created_date')
+     return render(request, 'blog/kr_picture_list.html', {'pictures': pictures})
+ 
+def kr_picture_list_view_all(request):
+     pictures = Picture.objects.filter().order_by('-created_date')
+     return render(request, 'blog/kr_picture_list_view_all.html', {'pictures': pictures}) 
+ 
+@login_required 
+@permission_required('blog.delete_picture', '/access_denied/kr' )
+def kr_picture_remove(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)
+    picture.delete()
+    return redirect('kr_picture_list')
+
+@login_required 
+def kr_like_picture(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)  
+    picture.likes.add(request.user)       
+    return redirect('kr_picture_detail', pk=pk)
+    
+@login_required 
+def kr_unlike_picture(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)
+    picture.likes.remove(request.user)
+    return redirect('kr_picture_detail', pk=pk)
+
+@login_required 
+def kr_like_picture2(request, pk):
+    picture = get_object_or_404(Picture, pk=pk)  
+    picture.likes.add(request.user)       
+    return redirect('kr_picture_detail', pk=pk)
+
+
+
+
+
+
+#-----------LIKE POST VIEWS-------------------
 
 
 @login_required 
@@ -498,6 +566,7 @@ def unlike_post(request, pk):
     post = get_object_or_404(Post, pk=pk)  
     post.likes.remove(request.user)       
     return redirect('post_detail', pk=pk)
+
 
 
 @login_required 
