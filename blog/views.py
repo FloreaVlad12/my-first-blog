@@ -64,6 +64,10 @@ def post_new(request):
 @permission_required('blog.change_post', '/access_denied' )
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if post.priority > 5:
+        if request.user.is_superuser == False:
+            return redirect ('no_permission')
+    
     if request.method == "POST":
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
@@ -92,6 +96,9 @@ def post_publish(request, pk):
 @permission_required('blog.delete_post', '/access_denied' )
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if post.priority > 5:
+        if request.user.is_superuser == False:
+            return redirect ('no_permission')
     post.delete()
     return redirect('post_list')
 
@@ -133,6 +140,9 @@ def kr_post_detail(request, pk):
 @permission_required('blog.change_post', '/access_denied/kr' )
 def kr_post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if post.priority > 5:
+        if request.user.is_superuser == False:
+            return redirect ('kr_no_permission')
     if request.method == "POST":
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
@@ -148,6 +158,9 @@ def kr_post_edit(request, pk):
 @permission_required('blog.delete_post', '/access_denied/kr' )
 def kr_post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    if post.priority > 5:
+        if request.user.is_superuser == False:
+            return redirect ('kr_no_permission')
     post.delete()
     return redirect('kr_post_list')
 

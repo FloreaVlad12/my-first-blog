@@ -8,8 +8,7 @@ urlpatterns = [
     path('publish_date_asc', views.post_list_publish_date_asc, name='post_list_publish_date_asc'),
     path('publish_date_desc', views.post_list_publish_date_desc, name='post_list_publish_date_desc'),
     path('publish_date_asc/kr', views.kr_post_list_publish_date_asc, name='kr_post_list_publish_date_asc'),
-    path('publish_date_desc/kr', views.kr_post_list_publish_date_desc, name='kr_post_list_publish_date_desc'),
-  
+    path('publish_date_desc/kr', views.kr_post_list_publish_date_desc, name='kr_post_list_publish_date_desc'),  
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
